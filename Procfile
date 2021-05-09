@@ -1,0 +1,1 @@
+web: gunicorn socnet.wsgi --log-file -

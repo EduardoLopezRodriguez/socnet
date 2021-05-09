@@ -1,0 +1,28 @@
+body {
+	background: linear-gradient(90deg, rgba(255, 153, 0, 0.3), rgba(30, 255, 0, 0.3));
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+a, #link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover, a:focus, #link:hover, #link:focus {
+    color: rgb(255, 153, 0);
+}
+
+.navbar {
+    padding-top:4px !important; padding-bottom:4px !important;
+}
+
+#contactar {
+	list-style-type: none;
+}
