@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <small>{{ object.date_posted }}</small>
+    <small class="text-muted">por</small>
+    <small class="fw-bold"><a href="{% url 'user_posts' object.author.username %}">{{ object.author }}</a></small>
+    <img class="rounded" src="{{ object.author.profile.profile_pic.url }}" alt="profile_pic" height="50">
+    <h1 class="card-title">{{ object.title }}</h1>
+    <p class="card-text">{{ object.content }}</p>
+
+    <br>
+
+    {% if object.author == user %}
+        <a class="btn btn-secondary" href="{% url 'post_update' object.id %}">Editar</a>
+        <a class="btn btn-danger" href="{% url 'post_delete' object.id %}">Eliminar</a>
+    {% endif %}
+
+{% endblock %}
